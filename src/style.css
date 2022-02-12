@@ -1,0 +1,55 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.logoIcon{
+    width: 15%;
+}
+
+.container{
+    display: flex;
+    margin-top: 50px;
+    justify-content: start;   
+    align-items: center;
+    flex-direction: column;
+    color: black;
+}
+
+.calculatorBody{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    width: 25%;
+    border-style: solid;
+    align-items: center;
+    justify-content: center;   
+    color: grey;
+}
+
+.calculatorRows{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    border: 0.5px;
+    border-style: solid;
+}
+
+.resultRow{
+    padding: 15px;
+}
+
+.calculatorButton{
+    text-align: center;
+    padding: 12px;
+    width: 100%;
+    border-style: solid;
+    /* Makes Button Unselectable */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

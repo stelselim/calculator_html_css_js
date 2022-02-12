@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <!---
+    The X-UA-Compatible meta tag allows web authors to choose what version of Internet Explorer the page should be rendered as.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <title>Calculator HTML CSS JS</title>
+    <link rel="icon" type="image/png" href="assets/Icon-192.png" />
+
+</head>
+
+<body>
+    <div class="container">
+        <h4>
+            CALCULATOR HTML CSS JS
+        </h4>
+        <img class="logoIcon" src="https://media.istockphoto.com/vectors/calculator-vector-id531633071"
+            alt="calculator_logo" />
+
+
+        <div class="calculatorBody">
+            <div class="calculatorRows">
+                <div id="calculator_result" class="resultRow">
+                    0
+                </div>
+            </div>
+            <div class="calculatorRows">
+                <div onclick="Calculator.prototype.buttonOnClick(1)" class="calculatorButton">
+                    1
+                </div>
+                <div onclick="Calculator.prototype.buttonOnClick(2)" class="calculatorButton">
+                    2
+                </div>
+                <div onclick="Calculator.prototype.buttonOnClick(3)" class="calculatorButton">
+                    3
+                </div>
+            </div>
+            <div class="calculatorRows">
+                <div onclick="Calculator.prototype.buttonOnClick(4)" class="calculatorButton">
+                    4
+                </div>
+                <div onclick="Calculator.prototype.buttonOnClick(5)" class="calculatorButton">
+                    5
+                </div>
+                <div onclick="Calculator.prototype.buttonOnClick(6)" class="calculatorButton">
+                    6
+                </div>
+            </div>
+            <div class="calculatorRows">
+                <div onclick="Calculator.prototype.buttonOnClick(7)" class="calculatorButton">
+                    7
+                </div>
+                <div onclick="Calculator.prototype.buttonOnClick(8)" class="calculatorButton">
+                    8
+                </div>
+                <div onclick="Calculator.prototype.buttonOnClick(9)" class="calculatorButton">
+                    9
+                </div>
+            </div>
+            <div class="calculatorRows">
+                <div onclick="Calculator.prototype.operatorOnClick('+')" class="calculatorButton">
+                    +
+                </div>
+                <div onclick="Calculator.prototype.operatorOnClick('-')" class="calculatorButton">
+                    -
+                </div>
+            </div>
+            <div class="calculatorRows">
+                <div onclick="Calculator.prototype.operatorOnClick('*')" class="calculatorButton">
+                    *
+                </div>
+                <div onclick="Calculator.prototype.operatorOnClick('/')" class="calculatorButton">
+                    /
+                </div>
+            </div>
+            <div class="calculatorRows">
+
+                <div onclick="Calculator.prototype.clear()" class="calculatorButton">
+                    CLEAR
+                </div>
+                <div onclick="Calculator.prototype.buttonOnClick(0)" class="calculatorButton">
+                    0
+                </div>
+            </div>
+            <div class="calculatorRows">
+
+                <div onclick="Calculator.prototype.calculate()" class="calculatorButton">
+                    CALCULATE
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <p style="padding: 20px;" id="history_data" />
+
+</body>
+
+</html>
