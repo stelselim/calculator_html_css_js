@@ -104,6 +104,46 @@
     <br>
     <p style="padding: 20px;" id="history_data" />
 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js";
+        import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.6.6/firebase-firestore.js'
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBFApBkYNK0y4Je2w_4Tj5zLaXxCjDW524",
+            authDomain: "calculator-html-css-js.firebaseapp.com",
+            projectId: "calculator-html-css-js",
+            storageBucket: "calculator-html-css-js.appspot.com",
+            messagingSenderId: "92125868689",
+            appId: "1:92125868689:web:3a19517570cd06b63c4530",
+            measurementId: "G-68D236HBGK"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        const db = getFirestore(app);
+        async function writeSessions() {
+            try {
+
+                const docRef = await addDoc(collection(db, "sessions",
+                    {
+                        session: "New Session",
+                        date: (new Date()).toISOString()
+                    })
+                );
+                console.log("Document written with ID: ", docRef.id);
+
+
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        writeSessions();
+    </script>
 </body>
 
 </html>
